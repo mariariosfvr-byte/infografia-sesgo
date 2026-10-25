@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Infografía interactiva sobre sesgos algorítmicos y discriminación en procesos de selección laboral.">
+  <meta name="theme-color" content="#0B1020">
+  <title>¿La IA decide quién merece una oportunidad?</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <div class="progress-track"><div class="progress-bar" id="progressBar"></div></div>
+
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Ir al inicio">
+      <span class="brand-mark">AI<span>_</span></span>
+      <span class="brand-name">ÉTICA <b>/</b> ALGORITMOS</span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    <nav class="main-nav" id="mainNav" aria-label="Navegación principal">
+      <a href="#funciona">Cómo funciona</a>
+      <a href="#sesgo">El sesgo</a>
+      <a href="#caso">Caso real</a>
+      <a href="#simulador">Experimento</a>
+      <a href="#soluciones">Soluciones</a>
+    </nav>
+    <span class="header-index">ENSAYO INTERACTIVO <i>01—07</i></span>
+  </header>
+
+  <main>
+    <section class="hero section" id="inicio">
+      <div class="hero-grid"></div>
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="pulse"></span> INTELIGENCIA ARTIFICIAL · SESGO ALGORÍTMICO</p>
+        <h1>¿La IA decide<br>quién merece una <span class="gradient-text">oportunidad?</span></h1>
+        <p class="hero-lead">Un algoritmo puede analizar miles de perfiles en segundos. Pero ¿puede distinguir el talento de los prejuicios que aprendió?</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#funciona">Explorar el dilema <span>↘</span></a>
+          <span class="reading-time">LECTURA INTERACTIVA · 5 MIN</span>
+        </div>
+      </div>
+      <div class="hero-visual reveal" aria-label="Ilustración abstracta de perfiles humanos y análisis algorítmico">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="scan-line"></div>
+        <div class="core">
+          <div class="core-face"><span></span><i></i></div>
+          <div class="core-label">HUMAN<br>DATA</div>
+        </div>
+        <div class="float-tag tag-a">CV_024 <b>ANALIZANDO</b></div>
+        <div class="float-tag tag-b">PATTERN <b>DETECTED</b></div>
+        <div class="float-tag tag-c">BIAS? <b class="warning-text">REVISAR</b></div>
+        <div class="visual-caption">FIG. 01 <span>EL ALGORITMO APRENDE DE LOS DATOS</span></div>
+      </div>
+      <div class="hero-bottom"><span>01 / INTRODUCCIÓN</span><span>DESPLÁZATE PARA DESCUBRIR <b>↓</b></span></div>
+    </section>
+
+    <section class="section intro-section" id="contexto">
+      <div class="section-kicker">01 — EL CONTEXTO</div>
+      <div class="intro-layout">
+        <h2>La selección laboral<br>también está cambiando.</h2>
+        <div class="intro-text">
+          <p>Algunas organizaciones utilizan herramientas de inteligencia artificial para apoyar tareas de contratación: analizar hojas de vida, identificar palabras clave, ordenar perfiles o asistir en la evaluación de candidatos.</p>
+          <p class="muted">Estas herramientas pueden agilizar procesos, pero sus resultados dependen de los datos, los objetivos y los criterios con los que fueron diseñadas.</p>
+        </div>
+      </div>
+      <div class="stat-row">
+        <div class="stat-card"><span class="stat-number">01</span><h3>Recopilar</h3><p>El sistema recibe información de perfiles y procesos anteriores.</p></div>
+        <div class="stat-card"><span class="stat-number">02</span><h3>Analizar</h3><p>Busca patrones y características relacionadas con sus criterios.</p></div>
+        <div class="stat-card"><span class="stat-number">03</span><h3>Clasificar</h3><p>Puede ordenar, recomendar o filtrar candidaturas.</p></div>
+      </div>
+    </section>
+
+    <section class="section process-section" id="funciona">
+      <div class="section-kicker">02 — EL PROCESO</div>
+      <div class="section-heading">
+        <div><p class="eyebrow">DE LOS DATOS A LA DECISIÓN</p><h2>¿Cómo funciona<br>una selección con IA?</h2></div>
+        <p class="section-description">Haz clic en cada etapa para conocer qué sucede y dónde pueden aparecer problemas.</p>
+      </div>
+      <div class="process-layout">
+        <div class="process-list" role="tablist" aria-label="Etapas del proceso">
+          <button class="process-step active" role="tab" aria-selected="true" data-step="0"><span>01</span><b>Datos de entrada</b><i>＋</i></button>
+          <button class="process-step" role="tab" aria-selected="false" data-step="1"><span>02</span><b>Entrenamiento</b><i>＋</i></button>
+          <button class="process-step" role="tab" aria-selected="false" data-step="2"><span>03</span><b>Evaluación</b><i>＋</i></button>
+          <button class="process-step" role="tab" aria-selected="false" data-step="3"><span>04</span><b>Recomendación</b><i>＋</i></button>
+        </div>
+        <article class="process-detail" id="processDetail" aria-live="polite">
+          <div class="detail-number">ETAPA 01 / 04</div>
+          <div class="detail-icon">▤</div>
+          <h3>Datos de entrada</h3>
+          <p>El sistema recibe información, como hojas de vida, experiencia, formación y requisitos del cargo. La calidad y representatividad de esos datos importan.</p>
+          <div class="detail-note"><b>¿Dónde puede aparecer un riesgo?</b><span>Si los datos reflejan desigualdades del pasado, pueden transmitirlas al sistema.</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section bias-section" id="sesgo">
+      <div class="section-kicker">03 — EL PROBLEMA</div>
+      <div class="bias-intro">
+        <p class="eyebrow">CUANDO EL PATRÓN SE CONVIERTE EN PREJUICIO</p>
+        <h2>El sesgo algorítmico</h2>
+        <p>Ocurre cuando un sistema produce resultados sistemáticamente desfavorables o injustos para ciertas personas o grupos. Puede surgir de datos poco representativos, decisiones de diseño o formas inadecuadas de utilizar la herramienta.</p>
+      </div>
+      <div class="bias-cards">
+        <article class="bias-card"><span class="card-index">A / DATOS</span><div class="bias-symbol">▦</div><h3>Datos poco diversos</h3><p>Si ciertos grupos están subrepresentados, el sistema puede aprender una visión incompleta del talento.</p></article>
+        <article class="bias-card"><span class="card-index">B / CRITERIOS</span><div class="bias-symbol">⌁</div><h3>Variables cuestionables</h3><p>Algunas características pueden funcionar como sustitutos indirectos de género, edad, origen u otras condiciones.</p></article>
+        <article class="bias-card"><span class="card-index">C / CONTROL</span><div class="bias-symbol">◉</div><h3>Falta de supervisión</h3><p>Confiar ciegamente en una recomendación automatizada puede permitir que un error afecte a una persona.</p></article>
+      </div>
+      <div class="quote-band"><span>IDEA CLAVE</span><p>La IA no es neutral por defecto: puede reproducir los patrones presentes en los datos y en las decisiones humanas.</p><span class="quote-mark">“</span></div>
+    </section>
+
+    <section class="section case-section" id="caso">
+      <div class="section-kicker">04 — UN CASO DOCUMENTADO</div>
+      <div class="case-layout">
+        <div class="case-copy">
+          <p class="eyebrow">2018 · AMAZON</p>
+          <h2>Cuando el historial<br>se convierte en filtro.</h2>
+          <p>Amazon desarrolló una herramienta experimental para analizar hojas de vida y apoyar la selección de personal en áreas técnicas. Según una investigación de Reuters, el sistema aprendió patrones a partir de solicitudes recibidas durante aproximadamente diez años, en su mayoría de hombres.</p>
+          <p>El modelo llegó a penalizar términos asociados con mujeres y a rebajar la valoración de candidatas de dos universidades femeninas. Amazon terminó abandonando el proyecto.</p>
+          <a class="text-link" href="https://www.theguardian.com/technology/2018/oct/10/amazon-hiring-ai-gender-bias-recruiting-engine" target="_blank" rel="noopener noreferrer">Consultar investigación de Reuters ↗</a>
+        </div>
+        <div class="case-visual">
+          <div class="case-stamp">CASO<br><strong>REAL</strong></div>
+          <div class="case-year">20<span>18</span></div>
+          <div class="case-bars">
+            <div><span>DATOS HISTÓRICOS</span><div class="bar-track"><i style="width:82%"></i></div></div>
+            <div><span>REPRESENTACIÓN EQUILIBRADA</span><div class="bar-track"><i class="bar-risk" style="width:28%"></i></div></div>
+          </div>
+          <p class="case-disclaimer">Esquema conceptual, no representa estadísticas reales del conjunto de datos.</p>
+        </div>
+      </div>
+      <div class="case-takeaway"><b>¿QUÉ NOS ENSEÑA?</b><span>Un sistema entrenado con decisiones históricas puede aprender desigualdades en lugar de reconocer el talento de manera justa.</span></div>
+    </section>
+
+    <section class="section dilemma-section" id="dilema">
+      <div class="section-kicker">05 — LA PREGUNTA ÉTICA</div>
+      <div class="dilemma-title"><p class="eyebrow">EFICIENCIA VS. JUSTICIA</p><h2>¿Quién responde<br>cuando la IA se equivoca?</h2></div>
+      <div class="dilemma-grid">
+        <article><span class="dilemma-icon">◇</span><h3>Justicia</h3><p>¿Todos los candidatos tienen una oportunidad comparable, sin importar características que no son relevantes para el cargo?</p></article>
+        <article><span class="dilemma-icon">⌕</span><h3>Transparencia</h3><p>¿La persona puede conocer qué criterios influyeron en la evaluación y cuestionar un resultado?</p></article>
+        <article><span class="dilemma-icon">◎</span><h3>Responsabilidad</h3><p>¿Quién debe responder por una decisión injusta: la empresa, quien desarrolla el sistema o quien lo utiliza?</p></article>
+      </div>
+      <div class="ethics-callout"><span class="callout-mark">!</span><p><b>La automatización no elimina la responsabilidad humana.</b><br>Las organizaciones deben evaluar, supervisar y corregir los sistemas que utilizan.</p></div>
+    </section>
+
+    <section class="section simulator-section" id="simulador">
+      <div class="section-kicker">06 — PONLO A PRUEBA</div>
+      <div class="section-heading">
+        <div><p class="eyebrow">SIMULACIÓN EDUCATIVA</p><h2>¿A quién elegirías?</h2></div>
+        <p class="section-description">Imagina que debes seleccionar a una persona para un cargo junior de desarrollo web. Explora los perfiles y compara sus competencias.</p>
+      </div>
+      <div class="simulator">
+        <div class="simulator-top"><span>VACANTE / DESARROLLO WEB JUNIOR</span><span>3 PERFILES FICTICIOS</span></div>
+        <div class="candidate-grid">
+          <article class="candidate">
+            <div class="candidate-avatar avatar-one">A</div><span class="candidate-id">PERFIL 001</span><h3>Alex R.</h3><p class="candidate-role">Desarrollo web</p>
+            <ul><li>HTML y CSS</li><li>JavaScript básico</li><li>Proyecto personal publicado</li><li>6 meses de experiencia</li></ul>
+            <button class="candidate-button" data-candidate="0">Evaluar perfil <span>↗</span></button>
+          </article>
+          <article class="candidate">
+            <div class="candidate-avatar avatar-two">B</div><span class="candidate-id">PERFIL 002</span><h3>Sam P.</h3><p class="candidate-role">Desarrollo web</p>
+            <ul><li>HTML y CSS</li><li>JavaScript básico</li><li>Proyecto académico</li><li>Práctica colaborativa</li></ul>
+            <button class="candidate-button" data-candidate="1">Evaluar perfil <span>↗</span></button>
+          </article>
+          <article class="candidate">
+            <div class="candidate-avatar avatar-three">C</div><span class="candidate-id">PERFIL 003</span><h3>Chris M.</h3><p class="candidate-role">Desarrollo web</p>
+            <ul><li>HTML y CSS</li><li>JavaScript básico</li><li>Proyecto freelance</li><li>Portafolio en línea</li></ul>
+            <button class="candidate-button" data-candidate="2">Evaluar perfil <span>↗</span></button>
+          </article>
+        </div>
+        <div class="sim-result" id="simResult" aria-live="polite">
+          <div class="result-icon">?</div><div><b>Tu decisión importa</b><p>Selecciona un perfil para ver una evaluación ilustrativa. Los tres perfiles tienen fortalezas distintas; no hay información suficiente para concluir quién es mejor.</p></div>
+        </div>
+        <p class="sim-note">Esta simulación es ficticia y no utiliza un modelo real de IA. Su propósito es mostrar por qué los criterios deben ser pertinentes, verificables y aplicados de forma consistente.</p>
+      </div>
+    </section>
+
+    <section class="section solutions-section" id="soluciones">
+      <div class="section-kicker">07 — HACIA UNA IA RESPONSABLE</div>
+      <div class="section-heading">
+        <div><p class="eyebrow">NO BASTA CON AUTOMATIZAR</p><h2>¿Cómo reducir<br>el riesgo de sesgo?</h2></div>
+        <p class="section-description">La IA puede apoyar la selección, pero debe formar parte de un proceso responsable y supervisado.</p>
+      </div>
+      <div class="solution-list">
+        <article><span>01</span><div><h3>Datos representativos</h3><p>Revisar la calidad y diversidad de los datos utilizados para entrenar y evaluar el sistema.</p></div><b>↗</b></article>
+        <article><span>02</span><div><h3>Auditorías periódicas</h3><p>Comprobar si los resultados generan diferencias injustificadas entre grupos.</p></div><b>↗</b></article>
+        <article><span>03</span><div><h3>Transparencia</h3><p>Comunicar cuándo se utiliza IA y ofrecer información comprensible sobre sus criterios.</p></div><b>↗</b></article>
+        <article><span>04</span><div><h3>Supervisión humana</h3><p>Permitir revisión, corrección y mecanismos para cuestionar decisiones automatizadas.</p></div><b>↗</b></article>
+      </div>
+    </section>
+
+    <section class="section quiz-section" id="reflexion">
+      <div class="quiz-panel">
+        <p class="eyebrow">CIERRE / COMPRUEBA LO QUE APRENDISTE</p>
+        <h2>¿Puedes detectar<br><span class="gradient-text">el sesgo?</span></h2>
+        <p class="quiz-intro">Un sistema se entrena con diez años de contrataciones en los que la mayoría de las personas seleccionadas fueron hombres. ¿Qué riesgo debería investigarse?</p>
+        <div class="quiz-options" id="quizOptions">
+          <button data-answer="wrong">Que el sistema procese las hojas de vida demasiado rápido.</button>
+          <button data-answer="correct">Que aprenda patrones históricos que desfavorezcan a mujeres.</button>
+          <button data-answer="wrong">Que todos los candidatos tengan demasiadas habilidades.</button>
+        </div>
+        <div class="quiz-feedback" id="quizFeedback" aria-live="polite"></div>
+        <button class="button button-outline" id="retryQuiz" hidden>Volver a intentar ↻</button>
+      </div>
+    </section>
+
+    <section class="final-section">
+      <p class="eyebrow">UNA ÚLTIMA REFLEXIÓN</p>
+      <h2>La tecnología puede<br>evaluar perfiles.<br><span class="gradient-text">La justicia debe ser un criterio.</span></h2>
+      <p>La inteligencia artificial debe ampliar oportunidades, no automatizar las desigualdades del pasado.</p>
+      <a href="#inicio" class="back-top">VOLVER AL INICIO ↑</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div><span class="brand-mark">AI<span>_</span></span><p>Infografía interactiva · Ética e inteligencia artificial</p></div>
+    <div class="sources"><b>FUENTES DE CONSULTA</b>
+      <a href="https://www.theguardian.com/technology/2018/oct/10/amazon-hiring-ai-gender-bias-recruiting-engine" target="_blank" rel="noopener noreferrer">The Guardian / Reuters — Amazon y sesgo en selección (2018)</a>
+      <a href="https://www.gov.uk/data-ethics-guidance/responsible-ai-in-recruitment-guide" target="_blank" rel="noopener noreferrer">GOV.UK — Responsible AI in Recruitment (2025)</a>
+      <a href="https://www.ilo.org/publications/ai-human-resource-management-limits-empiricism" target="_blank" rel="noopener noreferrer">OIT — IA en la gestión de recursos humanos (2025)</a>
+    </div>
+    <div class="footer-bottom"><span>PROYECTO ACADÉMICO</span><span>DISEÑADO Y PROGRAMADO CON HTML · CSS · JS</span></div>
+  </footer>
+</body>
+</html>
